@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "archon-ai"
+version = "1.0.0"
+description = "AI System Architect — describe your app in plain English, get a complete architecture package: diagrams, schemas, IaC, and deploy-ready code."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "PlayNexus" }]
+keywords = ["ai", "architecture", "system-design", "devtools", "infrastructure", "code-generation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+archon = "archon.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/Nortaq-PlayNexus/archon"
+Repository = "https://github.com/Nortaq-PlayNexus/archon"
+
+[tool.setuptools.packages.find]
+include = ["archon*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
