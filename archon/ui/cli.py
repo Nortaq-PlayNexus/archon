@@ -27,7 +27,9 @@ class CLIDisplay:
         console.print()
 
     def prompt_description(self) -> str:
-        console.print("[dim]Describe your application (be specific about features, scale, and tech preferences):[/dim]")
+        console.print(
+            "[dim]Describe your application (be specific about features, scale, and tech preferences):[/dim]"
+        )
         console.print()
         lines = []
         while True:
@@ -189,7 +191,9 @@ class CLIDisplay:
                 if "type" not in comp:
                     errors.append(f"Component '{comp.get('name', f'index {i}')}' missing 'type'")
                 if "technology" not in comp:
-                    warnings.append(f"Component '{comp.get('name', f'index {i}')}' missing 'technology'")
+                    warnings.append(
+                        f"Component '{comp.get('name', f'index {i}')}' missing 'technology'"
+                    )
 
         if "database_schema" in spec and isinstance(spec["database_schema"], dict):
             tables = spec["database_schema"].get("tables", [])
@@ -199,7 +203,9 @@ class CLIDisplay:
                 if "name" not in table:
                     errors.append(f"Table at index {i} missing 'name'")
                 if "columns" not in table:
-                    warnings.append(f"Table '{table.get('name', f'index {i}')}' has no columns defined")
+                    warnings.append(
+                        f"Table '{table.get('name', f'index {i}')}' has no columns defined"
+                    )
 
         if "api_endpoints" in spec and isinstance(spec["api_endpoints"], list):
             for i, ep in enumerate(spec["api_endpoints"]):
@@ -214,7 +220,11 @@ class CLIDisplay:
         table.add_column("Status", justify="center")
         table.add_column("Details")
 
-        table.add_row("JSON Syntax", "[green]✓[/green]" if not errors else "[red]✗[/red]", "Valid" if not errors else f"{len(errors)} errors")
+        table.add_row(
+            "JSON Syntax",
+            "[green]✓[/green]" if not errors else "[red]✗[/red]",
+            "Valid" if not errors else f"{len(errors)} errors",
+        )
 
         for field in required_fields:
             status = "[green]✓[/green]" if field in spec else "[red]✗[/red]"
@@ -224,9 +234,13 @@ class CLIDisplay:
         if spec.get("components"):
             table.add_row("Components", "[green]✓[/green]", f"{len(spec['components'])} defined")
         if spec.get("api_endpoints"):
-            table.add_row("API Endpoints", "[green]✓[/green]", f"{len(spec['api_endpoints'])} defined")
+            table.add_row(
+                "API Endpoints", "[green]✓[/green]", f"{len(spec['api_endpoints'])} defined"
+            )
         if spec.get("database_schema", {}).get("tables"):
-            table.add_row("DB Tables", "[green]✓[/green]", f"{len(spec['database_schema']['tables'])} defined")
+            table.add_row(
+                "DB Tables", "[green]✓[/green]", f"{len(spec['database_schema']['tables'])} defined"
+            )
 
         console.print(table)
 

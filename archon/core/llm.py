@@ -24,17 +24,17 @@ class LLMClient:
             except requests.exceptions.Timeout as e:
                 last_error = e
                 if attempt < 2:
-                    time.sleep(1 * (2 ** attempt))
+                    time.sleep(1 * (2**attempt))
                     continue
             except requests.exceptions.ConnectionError as e:
                 last_error = e
                 if attempt < 2:
-                    time.sleep(1 * (2 ** attempt))
+                    time.sleep(1 * (2**attempt))
                     continue
             except requests.exceptions.RequestException as e:
                 last_error = e
                 if attempt < 2:
-                    time.sleep(1 * (2 ** attempt))
+                    time.sleep(1 * (2**attempt))
                     continue
         raise RuntimeError(
             f"LLM request failed after 3 attempts. "

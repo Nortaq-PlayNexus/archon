@@ -1,7 +1,6 @@
 """Database schema generator — produces SQL DDL from architecture spec."""
 
 
-
 class SchemaGenerator:
     TYPE_MAP = {
         "UUID": "UUID",
@@ -123,8 +122,7 @@ class SchemaGenerator:
             for col in columns:
                 if col.get("unique") and not col.get("primary_key"):
                     lines.append(
-                        f"CREATE UNIQUE INDEX idx_{name}_{col['name']} "
-                        f"ON {name} ({col['name']});"
+                        f"CREATE UNIQUE INDEX idx_{name}_{col['name']} ON {name} ({col['name']});"
                     )
         elif dialect == "sqlite":
             for col in columns:

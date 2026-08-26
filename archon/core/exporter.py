@@ -12,7 +12,10 @@ class RepoExporter:
         self._write_file(output_path / ".github" / "PULL_REQUEST_TEMPLATE.md", self._pr_template())
         self._write_file(output_path / ".github" / "workflows" / "ci.yml", self._ci_yml())
         self._write_file(output_path / ".github" / "dependabot.yml", self._dependabot_yml())
-        self._write_file(output_path / ".github" / "ISSUE_TEMPLATE" / "bug_report.md", self._bug_report_template())
+        self._write_file(
+            output_path / ".github" / "ISSUE_TEMPLATE" / "bug_report.md",
+            self._bug_report_template(),
+        )
         self._write_file(output_path / "Makefile", self._makefile())
 
         if (output_path / "Dockerfile").exists():

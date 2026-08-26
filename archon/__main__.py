@@ -22,9 +22,21 @@ def build_parser() -> argparse.ArgumentParser:
     gen.add_argument("description", nargs="?", help="Natural language app description")
     gen.add_argument("--interactive", "-i", action="store_true", help="Interactive mode")
     gen.add_argument("--output", "-o", type=str, default="./archon-output", help="Output directory")
-    gen.add_argument("--style", choices=["microservices", "monolith", "serverless", "hybrid"], default=None, help="Architecture style (auto-detected if omitted)")
-    gen.add_argument("--cloud", choices=["aws", "gcp", "azure", "any"], default="any", help="Target cloud provider")
-    gen.add_argument("--export-repo", action="store_true", help="Export as a complete GitHub-ready repo")
+    gen.add_argument(
+        "--style",
+        choices=["microservices", "monolith", "serverless", "hybrid"],
+        default=None,
+        help="Architecture style (auto-detected if omitted)",
+    )
+    gen.add_argument(
+        "--cloud",
+        choices=["aws", "gcp", "azure", "any"],
+        default="any",
+        help="Target cloud provider",
+    )
+    gen.add_argument(
+        "--export-repo", action="store_true", help="Export as a complete GitHub-ready repo"
+    )
 
     info = sub.add_parser("info", help="Show supported stacks and options")
     info.add_argument("--stacks", action="store_true", help="List supported tech stacks")

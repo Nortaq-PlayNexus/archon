@@ -1,7 +1,6 @@
 """Infrastructure code generator — Terraform, Docker, Docker Compose."""
 
 
-
 class InfraGenerator:
     def generate_terraform(self, spec: dict) -> str:
         infra = spec.get("infrastructure", {})

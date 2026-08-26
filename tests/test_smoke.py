@@ -4,8 +4,10 @@ import pytest
 
 import archon
 
+
 def test_package_importable():
     assert archon is not None
+
 
 def test_import_all_submodules():
     errors = []
