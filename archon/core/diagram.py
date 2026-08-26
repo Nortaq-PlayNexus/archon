@@ -1,6 +1,5 @@
 """Architecture diagram generator — produces Mermaid and Markdown diagrams."""
 
-from typing import Any
 
 
 class DiagramGenerator:

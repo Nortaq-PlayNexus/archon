@@ -1,6 +1,5 @@
 """Database schema generator — produces SQL DDL from architecture spec."""
 
-from typing import Any
 
 
 class SchemaGenerator:

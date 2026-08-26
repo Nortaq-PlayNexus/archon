@@ -1,9 +1,7 @@
 """Main architecture generator — orchestrates all sub-generators."""
 
 import json
-import os
 from pathlib import Path
-from datetime import datetime
 from typing import Any
 
 from archon.core.llm import LLMClient

@@ -1,7 +1,6 @@
 """Repo exporter — packages output as a GitHub-ready repository."""
 
 from pathlib import Path
-from typing import Any
 
 
 class RepoExporter:

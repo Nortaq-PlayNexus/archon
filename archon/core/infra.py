@@ -1,6 +1,5 @@
 """Infrastructure code generator — Terraform, Docker, Docker Compose."""
 
-from typing import Any
 
 
 class InfraGenerator:
@@ -342,33 +341,33 @@ resource "azurerm_container_group" "app" {{
             lines.append(f"    image: {tech}")
 
             if ctype == "service":
-                lines.append(f"    build:")
-                lines.append(f"      context: .")
-                lines.append(f"      dockerfile: Dockerfile")
+                lines.append("    build:")
+                lines.append("      context: .")
+                lines.append("      dockerfile: Dockerfile")
             elif ctype in ("database", "cache"):
-                lines.append(f"    restart: unless-stopped")
+                lines.append("    restart: unless-stopped")
 
             if ports:
                 port_mapping = f"{ports[0]}:{ports[0]}"
-                lines.append(f"    ports:")
+                lines.append("    ports:")
                 lines.append(f'      - "{port_mapping}"')
 
             if ctype == "database":
-                lines.append(f"    environment:")
-                lines.append(f"      POSTGRES_DB: appdb")
-                lines.append(f"      POSTGRES_USER: dbadmin")
-                lines.append(f"      POSTGRES_PASSWORD: ${{DB_PASSWORD:-changeme}}")
-                lines.append(f"    volumes:")
-                lines.append(f"      - pgdata:/var/lib/postgresql/data")
+                lines.append("    environment:")
+                lines.append("      POSTGRES_DB: appdb")
+                lines.append("      POSTGRES_USER: dbadmin")
+                lines.append("      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}")
+                lines.append("    volumes:")
+                lines.append("      - pgdata:/var/lib/postgresql/data")
 
             if ctype == "cache":
-                lines.append(f"    command: redis-server --appendonly yes")
-                lines.append(f"    volumes:")
-                lines.append(f"      - redisdata:/data")
+                lines.append("    command: redis-server --appendonly yes")
+                lines.append("    volumes:")
+                lines.append("      - redisdata:/data")
 
             deps = comp.get("dependencies", [])
             if deps:
-                lines.append(f"    depends_on:")
+                lines.append("    depends_on:")
                 for dep in deps:
                     lines.append(f"      - {dep}")
 

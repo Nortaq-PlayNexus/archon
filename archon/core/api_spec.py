@@ -11,10 +11,10 @@ class APISpecGenerator:
 
         lines = [
             "openapi: 3.1.0",
-            f"info:",
+            "info:",
             f'  title: "{app_name} API"',
             f'  description: "{description}"',
-            f"  version: 1.0.0",
+            "  version: 1.0.0",
             "servers:",
             "  - url: http://localhost:8000",
             "    description: Local development",
