@@ -1,20 +1,38 @@
-<div align="center">
+<p align="center">
+  <img src="https://img.shields.io/badge/ARCHON-AI%20SYSTEM%20ARCHITECT-00E5FF?style=flat-square&labelColor=0a0e1a" alt="archon" />
+</p>
 
-# Archon
+# ARCHON :: AI SYSTEM ARCHITECT
 
 **Describe your app in plain English. Get the entire backend — diagrams, schemas, IaC, Docker configs, and deploy-ready code.**
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-%3E%3D3.11-3776AB?logo=python&logoColor=white)](https://python.org)
-[![OpenAI](https://img.shields.io/badge/LLM-OpenAI_API-412991?logo=openai&logoColor=white)](https://openai.com)
+<p align="center">
+  <img src="https://img.shields.io/badge/PYTHON-%3E%3D3.11-ffc430?style=flat-square&logo=python&logoColor=ffc430&labelColor=0a0e1a" alt="python"/>
+  <img src="https://img.shields.io/badge/LLM-OLLAMA%20%2F%20OPENAI-3dd5ff?style=flat-square&labelColor=0a0e1a" alt="llm"/>
+  <img src="https://img.shields.io/badge/OUTPUT-SCHEMA--SQL%20%2B%20IAC%20%2B%20DOCKER-B8FF1E?style=flat-square&labelColor=0a0e1a" alt="output"/>
+  <img src="https://img.shields.io/badge/TARGETS-AWS%20GCP%20AZURE-00E5FF?style=flat-square&labelColor=0a0e1a" alt="targets"/>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-ff3b3b?style=flat-square&labelColor=0a0e1a" alt="license"/></a>
+</p>
 
-</div>
+<pre>
+IDENT ......... ARCHON-00
+CLASS ......... AI SYSTEM ARCHITECT
+STATUS ........ ONLINE / ACTIVE
+INPUT ......... PLAIN-ENGLISH SPEC
+OUTPUT ........ DIAGRAM + SCHEMA + IAC + DOCKER
+LINK .......... /archon
+</pre>
+
+---
+
+## // 01 :: SIGNAL
 
 **Archon** is an AI system architect that takes a plain-English description of your application and generates a complete architecture package: component diagrams, database schemas, API specs, Terraform IaC, Docker configurations, and a GitHub-ready project structure.
 
 No more whiteboard sessions. No more "let me think about the architecture." Just describe what you want and deploy it.
 
----\n---\n\n## Screenshots\n\n| Preview | Description |\n|---------|-------------|\n| ![screenshot](docs/screenshots/screenshot.png) | Main interface |\n| ![screenshot](docs/screenshots/demo.gif) | Demo |\n\n*Screenshots coming soon — placeholders auto-generated. Replace docs/screenshots/ with real captures.*\n
+---
+\n---\n\n## Screenshots\n\n| Preview | Description |\n|---------|-------------|\n| ![screenshot](docs/screenshots/screenshot.png) | Main interface |\n| ![screenshot](docs/screenshots/demo.gif) | Demo |\n\n*Screenshots coming soon — placeholders auto-generated. Replace docs/screenshots/ with real captures.*\n
 
 ## What it generates
 
