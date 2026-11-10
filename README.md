@@ -32,7 +32,7 @@ LINK .......... /archon
 No more whiteboard sessions. No more "let me think about the architecture." Just describe what you want and deploy it.
 
 ---
-\n---\n\n## Screenshots\n\n| Preview | Description |\n|---------|-------------|\n| ![screenshot](docs/screenshots/screenshot.png) | Main interface |\n| ![screenshot](docs/screenshots/demo.gif) | Demo |\n\n*Screenshots coming soon — placeholders auto-generated. Replace docs/screenshots/ with real captures.*\n
+
 
 ## What it generates
 
@@ -176,3 +176,8 @@ export ARCHON_OPENAI_KEY=sk-...    # takes precedence
 ## License
 
 [MIT](LICENSE) — PlayNexus
+
+
+## Screenshot status
+
+Application captures are not included in this checkout. Add screenshots from a documented run before presenting a visual demonstration.
